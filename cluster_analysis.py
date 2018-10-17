@@ -51,18 +51,18 @@ def cos_sim_clustering(item, number_of_stories=1000):
   return g, sentences
 
 
-def plot_small_random_sample(item):
+def plot_small_random_sample(item, name):
   g, sentences = cos_sim_clustering(item, number_of_stories=5)
-  g.savefig("small_plot_{}.png".format(item))
+  g.savefig("small_plot_{}.png".format(name))
   for idx in g.dendrogram_row.reordered_ind:
     print("{:4}: {}".format(idx, translate(sentences[idx])))
 
 print("generating cosine similarity matrices for several representations of every sentence.")
 
-plot_small_random_sample(e1)
-plot_small_random_sample(e2)
-plot_small_random_sample(r1)
-plot_small_random_sample(r2)
-plot_small_random_sample(r3)
+plot_small_random_sample(e1, "e1")
+plot_small_random_sample(e2, "e2")
+plot_small_random_sample(r1, "r1")
+plot_small_random_sample(r2, "r2")
+plot_small_random_sample(r3, "r3")
 
 print("image files written.")
