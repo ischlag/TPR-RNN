@@ -14,25 +14,21 @@ import tensorflow
 import sys 
 import os
 
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
 sys.argv = [sys.argv[0], 0, "tmp"] # force parameters for easy use
 
 from tpr_rnn_graph import * # this import will create the graph
 
+import matplotlib
+matplotlib.use('Agg')
 from matplotlib import pyplot as plt
 from sklearn.metrics.pairwise import cosine_similarity
 import seaborn as sns
 
-
-# print test and validation set performance
-print("evaluate a random model:")
-#full_eval() # evaluate the random initialized model
-print()
 print("restoring a trained model ...")
 saver.restore(sess, "pre_trained/model.ckpt")
 print()
 print("evaluate the trained model:")
-#full_eval() # evaluate the trained model
+full_eval() # evaluate the trained model
 print()
 
 
@@ -61,8 +57,12 @@ def plot_small_random_sample(item):
   for idx in g.dendrogram_row.reordered_ind:
     print("{:4}: {}".format(idx, translate(sentences[idx])))
 
+print("generating cosine similarity matrices for several representations of every sentence.")
+
 plot_small_random_sample(e1)
 plot_small_random_sample(e2)
 plot_small_random_sample(r1)
 plot_small_random_sample(r2)
 plot_small_random_sample(r3)
+
+print("image files written.")

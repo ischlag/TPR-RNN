@@ -9,7 +9,6 @@ import tensorflow
 import sys 
 import os
 
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
 sys.argv = [sys.argv[0], 0, "tmp"] # force parameters for easy use
 
 from tpr_rnn_graph import * # this import will create the graph
@@ -26,5 +25,6 @@ full_eval() # evaluate the trained model
 print()
 
 # show an example
+print("printing a random sample:")
 show_random_sample()
 
