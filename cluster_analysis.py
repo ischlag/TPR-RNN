@@ -59,10 +59,19 @@ def plot_small_random_sample(item, name):
 
 print("generating cosine similarity matrices for several representations of every sentence.")
 
+print("\nthe randomly selected sentences for e1:")
 plot_small_random_sample(e1, "e1")
+
+print("\nthe randomly selected sentences for e2:")
 plot_small_random_sample(e2, "e2")
+
+print("\nthe randomly selected sentences for r1:")
 plot_small_random_sample(r1, "r1")
+
+print("\nthe randomly selected sentences for r2:")
 plot_small_random_sample(r2, "r2")
+
+print("\nthe randomly selected sentences for r3:")
 plot_small_random_sample(r3, "r3")
 
-print("image files written.")
+print("\nall image files written.")
