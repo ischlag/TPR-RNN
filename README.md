@@ -33,7 +33,7 @@ python3 cluster_analysis.py
 # Results
 With this code we achieved the following error percentage (rounded to two decimal places) when trained on all bAbI tasks simultaneously. In the appendix of the paper we provide a breakdown per task.
 
-task|run-0|run-1|run-2|run-3|run-4|run-5|run-6|run-7|best|mean|var
+task|run-0|run-1|run-2|run-3|run-4|run-5|run-6|run-7|best|mean|std
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 all|1.50|1.69|1.13|1.04|0.78|0.96|1.20|2.40|0.78|1.34|0.52
 
