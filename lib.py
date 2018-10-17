@@ -100,7 +100,7 @@ def get_total_trainable_parameters():
 
 def init_logger(log_folder, file_name="output.log"):
   if os.path.exists(log_folder):
-    print("WARNING: The results directory (%s) already exists. Remove results directory [y/N]? " % log_folder, end="")
+    print("WARNING: The results directory (%s) already exists. Delete previous results directory [y/N]? " % log_folder, end="")
     var = input()
     if var is "y" or var is "Y":
       print("removing directory ...")

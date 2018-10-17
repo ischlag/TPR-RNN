@@ -62,9 +62,9 @@ log = lambda *x: logger.debug((x[0].replace('{','{{').replace('}','}}') + "{} " 
 batch_size = tf.placeholder(tf.int64) # dynamic batch_size
 
 p = np.random.permutation(len(raw_train[0])) # random permutation of the train_data
-train_data = tf.data.Dataset.from_tensor_slices((raw_train[0][p],raw_train[1][p],raw_train[2][p],raw_train[3][p])).repeat().batch(batch_size).cache()
-valid_data = tf.data.Dataset.from_tensor_slices((raw_valid[0],raw_valid[1],raw_valid[2],raw_valid[3])).repeat().batch(batch_size).cache()
-test_data = tf.data.Dataset.from_tensor_slices((raw_test[0],raw_test[1],raw_test[2],raw_test[3])).repeat().batch(batch_size).cache()
+train_data = tf.data.Dataset.from_tensor_slices((raw_train[0][p],raw_train[1][p],raw_train[2][p],raw_train[3][p])).cache().repeat().batch(batch_size)
+valid_data = tf.data.Dataset.from_tensor_slices((raw_valid[0],raw_valid[1],raw_valid[2],raw_valid[3])).cache().repeat().batch(batch_size)
+test_data = tf.data.Dataset.from_tensor_slices((raw_test[0],raw_test[1],raw_test[2],raw_test[3])).cache().repeat().batch(batch_size)
 
 train_iterator = train_data.make_initializable_iterator()
 valid_iterator = valid_data.make_initializable_iterator()
@@ -398,6 +398,12 @@ def eval(steps=1, prefix="", batch_source=valid_batch, bs=valid_epoch_size):
     result = sess.run(query_dic, feed_dic)
     cost_sum += result[cost.name]
     acc_sum += result[accuracy.name]    
+
+  # the following fetch is only to trigger caching and have the cache warning go away
+  try:
+    sess.run(batch_source)
+  except tf.errors.OutOfRangeError: # single-task eval doesn't have repeat()
+    pass
 
   n_stories = steps * bs
   eval_time = (time.time() - etime) / 60.0
