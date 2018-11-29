@@ -1,5 +1,5 @@
 # Learning to Reason with Third-Order Tensor Products
-This repository contains the code accompanying the paper Learning to Reason with Third-Order Tensor Products. The paper introduces Tensor Product Representation Recurrent Neural Network (TPR-RNN) applied to the bAbI tasks and achieves SOTA.
+This repository contains the code accompanying the paper [\textit{Learning to Reason with Third-Order Tensor Products}](https://papers.nips.cc/paper/8203-learning-to-reason-with-third-order-tensor-products). It encompasses our implementation of the Tensor Product Representation Recurrent Neural Network (TPR-RNN) applied to the bAbI tasks with SOTA results.
 
 # Requirements
 - Python 3
