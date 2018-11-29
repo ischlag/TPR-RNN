@@ -39,7 +39,7 @@ all|1.50|1.69|1.13|1.04|0.78|0.96|1.20|2.40|0.78|1.34|0.52
 
 # Citation
 ```
-@inproceedings{schlag2018learning,
+@inproceedings{schlag2018tprrnn,
   title={Learning to Reason with Third Order Tensor Products},
   author={Schlag, Imanol and Schmidhuber, J{\"u}rgen},
   booktitle={Advances in Neural Information Processing Systems},
