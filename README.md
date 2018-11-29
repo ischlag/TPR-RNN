@@ -31,7 +31,7 @@ python3 cluster_analysis.py
 ```
 
 # Results
-With this code we achieved the following error percentage (rounded to two decimal places) when trained on all bAbI tasks simultaneously. In the appendix of the paper we provide a breakdown per task.
+With this code we achieved the following error (rounded to two decimal places) when trained on all bAbI tasks simultaneously. In the appendix of the paper we provide a breakdown per task.
 
 task|run-0|run-1|run-2|run-3|run-4|run-5|run-6|run-7|best|mean|std
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
