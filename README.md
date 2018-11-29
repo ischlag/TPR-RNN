@@ -2,10 +2,10 @@
 This repository contains the code accompanying the paper Learning to Reason with Third-Order Tensor Products. The paper introduces Tensor Product Representation Recurrent Neural Network (TPR-RNN) applied to the bAbI tasks and achieves SOTA.
 
 # Requirements
-- python 3
-- tensorflow==1.11.0
-- seaborn==0.9.0
-- sklearn==0.0
+- Python 3
+- Tensorflow==1.11.0
+- Seaborn==0.9.0
+- Sklearn==0.0
 
 Make sure to upgrade pip before installing the requirements.
 ```bash
