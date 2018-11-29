@@ -38,4 +38,12 @@ task|run-0|run-1|run-2|run-3|run-4|run-5|run-6|run-7|best|mean|std
 all|1.50|1.69|1.13|1.04|0.78|0.96|1.20|2.40|0.78|1.34|0.52
 
 # Citation
-todo
+```
+@inproceedings{schlag2018learning,
+  title={Learning to Reason with Third Order Tensor Products},
+  author={Schlag, Imanol and Schmidhuber, J{\"u}rgen},
+  booktitle={Advances in Neural Information Processing Systems},
+  pages={10002--10013},
+  year={2018}
+}
+```
