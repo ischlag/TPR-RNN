@@ -9,8 +9,7 @@ This repository contains the code accompanying the paper [*Learning to Reason wi
 
 Make sure to upgrade pip before installing the requirements.
 ```bash
-pip install --upgrade pip
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 sh download_data_and_model.sh
 ```
 
